@@ -9,7 +9,7 @@ You can configure Molecule to use this image in `molecule.yml`. The container wi
 ```
 platforms:
   - name: instance
-    image: upennlibraries/dind_molecule
+    image: quay.io/upennlibraries/dind_molecule
     command: dockerd-entrypoint.sh
     privileged: true
 ```
@@ -19,7 +19,7 @@ If you want to run Docker in swarm mode, you can run the Docker daemon in backgr
 ```
 platforms:
   - name: instance
-    image: upennlibraries/dind_molecule
+    image: quay.io/upennlibraries/dind_molecule
     command: bash -c "dockerd-entrypoint.sh & docker swarm init; while true; do sleep 10000; done"
     privileged: true
 ```
