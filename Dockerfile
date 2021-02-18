@@ -1,4 +1,4 @@
 FROM docker:dind
 
-RUN apk update && apk add --no-cache python py-pip
-RUN pip install docker
+RUN apk add --no-cache python3 py-pip && \
+    pip install docker
